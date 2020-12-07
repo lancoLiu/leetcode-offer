@@ -20,6 +20,7 @@ package leetcode_offer
 */
 //需要一个指针，用该指针的next.val判断是否等于给定的val
 func deleteNode(head *ListNode, val int) *ListNode {
+	//哨兵节点，删除节点可能会删除头节点，用哨兵节点会比较简单处理这种情况
 	dummy := &ListNode{}
 	dummy.Next = head
 	prev := dummy

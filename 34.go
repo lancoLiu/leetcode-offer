@@ -4,7 +4,8 @@ package leetcode_offer
 输入一棵二叉树和一个整数，打印出二叉树中节点值的和为输入整数的所有路径。从树的根节点开始往下一直到叶节点所经过的节点形成一条路径。
 
 
-
+[5,4,8,11,null,13,4,7,2,null,null,5,1]
+22
 示例:
 给定如下二叉树，以及目标和 sum = 22，
 
@@ -59,5 +60,6 @@ func recur3(root *TreeNode, target int, res []int) {
 
 	recur3(root.Left, target-root.Val, res)
 	recur3(root.Right, target-root.Val, res)
+	//go中切片作为函数参数传递时，只是将切片的地址赋值给对应的形参，当函数内切片发生扩容时不会回传给原来的切片，也就是你的path参数其实每一次回到上一层就自动回退了
 	res = res[:len(res)-1]
 }

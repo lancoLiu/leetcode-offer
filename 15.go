@@ -18,8 +18,8 @@ func hammingWeight(num uint32) int {
 }
 
 /**
-若 n & 1 = n&1=0 ，则 n 二进制 最右一位 为 0
-若 n & 1 = n&1=1 ，则 n 二进制 最右一位 为 1
+若 n & 1 = 0 ，则 n 二进制 最右一位 为 0
+若 n & 1 = 1 ，则 n 二进制 最右一位 为 1
 */
 func hammingWeight2(num uint32) int {
 	res := 0

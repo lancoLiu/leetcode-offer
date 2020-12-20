@@ -25,7 +25,7 @@ import "container/list"
 */
 //递归处理,1,3交换，6，9交换；递归上层，2，7交换带动
 func mirrorTree(root *TreeNode) *TreeNode {
-	//终止条件： 当节点 rootroot 为空时（即越过叶节点），则返回 nullnull ；
+	//终止条件： 当节点 root 为空时（即越过叶节点），则返回 null ；
 	if root == nil {
 		return root
 	}
